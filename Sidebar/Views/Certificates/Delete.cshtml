@@ -1,0 +1,39 @@
+﻿@model Sidebar.Models.Certificate
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3 class="custom-font fadein center-adjust">Deleting Certificate</h3>
+<hr />
+<div class="center-adjust">
+
+    <dl class="row custom-font fadein">
+        <dt class="rightalign col-sm-6">
+            @Html.DisplayNameFor(model => model.TitleOfCertificate)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.TitleOfCertificate)
+        </dd>
+        <dt class="rightalign col-sm-6">
+            @Html.DisplayNameFor(model => model.PassingGrade)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.PassingGrade)
+        </dd>
+        <dt class="rightalign col-sm-6">
+            @Html.DisplayNameFor(model => model.MaximumScore)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.MaximumScore)
+        </dd>
+    </dl>
+
+</div>
+<div class="center-adjust">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" style="width:100px;" class="btn btn-danger col-sm-6" /> |
+        <a asp-action="Index" style="width:110px;" class="btn btn-primary col-sm-6">Back to List</a>
+        </form>
+</div>

@@ -1,0 +1,192 @@
+html {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    background-image: url(../images/peakpx.jpg);
+    background-color: #222222;
+}
+
+.linknolineandwhite > button > a {
+    text-decoration: none;
+    color: white;
+}
+
+
+button > a {
+    color: aliceblue !important;
+}
+
+.hide-on-load {
+    display: none;
+}
+.my-round-button {
+    cursor: pointer;
+    width: 130px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    
+}
+
+
+
+.viewbody {
+    animation: fadein 1.5;
+    font-size: 19px;
+}
+
+.fadein {
+    animation: fadein 1s;
+}
+
+.custom-font {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.table {
+    animation: fadein 1.5s;
+    
+}
+
+
+.btn:hover {
+    box-shadow: 0px 0px 10px #ddd;
+}
+
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.sticky-header:hover {
+    filter: brightness(115%) blur(0px);
+    box-shadow: 0px 0px 0px #ddd;
+}
+
+
+.btn-primary {
+    animation: fadein 1.5s;
+   
+}
+
+.btn-success {
+    animation: fadein 2.5s;
+    
+}
+
+.btn-danger {
+    animation: fadein 3.5s;
+}
+
+.btn-info {
+    animation: fadein 1s;
+}
+
+.btn-warning {
+    animation: fadein 1s;
+}
+
+
+.center-adjust {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.rightalign {
+    text-align: right;
+    text-decoration: underline;
+}
+
+.typing-text {
+    
+    white-space: nowrap;
+}
+
+
+
+.col-md-4 text:hover {
+    color: #fdec6e;
+    text-shadow: 0px 0px 30px #fdec6e;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+
+    
+
+    .button {
+        text-align:center;
+    }
+
+    .table {
+        table-layout:fixed;
+        word-wrap:break-word;
+        border-radius:30px;
+        background-color:#0005;
+        width:900px;
+        margin-left:200px;
+    }
+
+    /*select*/
+/*.form-control:focus {
+    box-shadow: 0 0 6px 3px #48abe0,0 0 6px 2px #48abe0 inset;
+}
+
+.form-control:hover {
+    box-shadow:  0 0 6px 3px #48abe0 ,0 0 6px 2px #48abe0 inset;
+}
+*/
+
+.form-control:focus {
+    box-shadow: 0 0 3px #48abe0 inset, 0 0 6px 2px #48abe0 inset, 0 0 9px 4px #48abe0 inset, 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+.form-control:hover {
+    box-shadow: 0 0 3px #48abe0 inset, 0 0 6px 2px #48abe0 inset, 0 0 9px 4px #48abe0 inset, 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+.nav-link:hover {
+    text-shadow: 0 0 20px #3498db, 0 0 30px #3498db, 0 0 40px #FFFFFF;
+    
+}
+
+
+
+.navbar-brand:hover {
+    text-shadow: 0 0 20px #3498db, 0 0 30px #3498db, 0 0 40px #FFFFFF;
+}
+
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

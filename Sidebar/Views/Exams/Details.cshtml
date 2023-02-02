@@ -1,0 +1,64 @@
+﻿@model Sidebar.Dtos.ExamDto
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h3 class="custom-font fadein center-adjust">Examination Details</h3>
+<hr />
+<div class="custom-font fadein">
+    <dl class="row">
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.AssessmentTestCode)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.AssessmentTestCode)
+        </dd>
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.ExaminationDate)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.ExaminationDate)
+        </dd>
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.ScoreReportDate)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.ScoreReportDate)
+        </dd>
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.CandidateScore)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.CandidateScore)
+        </dd>
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.PercentageScore)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.PercentageScore)
+        </dd>
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.AssessmentResultLabel)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.AssessmentResultLabel)
+        </dd>
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.TitleOfCertificate)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.TitleOfCertificate)
+        </dd>
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.CandidateId)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.CandidateId)
+        </dd>
+    </dl>
+</div>
+<div class="center-adjust">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" style="width:100px;" class="custom-font btn btn-info col-sm-7">Edit</a> |
+    <a asp-action="Index" style="width:110px;" class="text-nowrap custom-font btn btn-primary col-sm-7">Back to List</a>
+</div>

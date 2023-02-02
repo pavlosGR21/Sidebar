@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sidebar</title>
+
+ <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/bootstrapDarkly.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Sidebar.styles.css" asp-append-version="true" />
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.4.0/classic/ckeditor.js"></script>    
+
+<style>
+/*.body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  background-image: src*/
+        /*}*/
+
+        .sidenav {
+            
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #0005;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            border-radius: 0 5px 5px 0;
+        }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 20px;
+                color: lightgray;
+                transition: 0.3s;
+                text-align:left;
+                margin-left: 18px;
+            }
+
+                .sidenav a:hover {
+                    color: white;
+                }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        .typing-text {
+  text-shadow: 2px 2px 2px #333;
+}
+  
+</style>
+</head>
+<body>
+
+ <div class="  container-fluid">
+   <nav class=" bg-primary">
+      <div id="mySidenav" class="sidenav">
+        <ul class="navbar-nav flex-grow-1">
+            @*<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>*@
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Candidates" asp-action="Index">Candidates</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Certificates" asp-action="Index">Certificates</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Topics" asp-action="Index">Topics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Stems" asp-action="Index">Stems</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="ExamStems" asp-action="Index">ExamStems</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Exams" asp-action="Index">Exams(index)</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Exams" asp-action="Create">Exams(Create)</a>
+            </li>
+           @* <li>
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+            </li>
+            <li>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </li>*@
+        </ul>
+
+     </div>
+  </nav>
+</div>
+    <div id="main">
+
+
+
+
+        <span class="sticky-header" style=" font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776;  &nbsp  menu </span>
+        
+</div>
+    <div class=" container ">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+<script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "180px";
+            //document.getElementById("main").style.marginLeft = "190px";
+            //document.body.style.backgroundColor = "#111111";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            //document.getElementById("main").style.marginLeft = "0";
+            //document.body.style.backgroundColor = "#222222";
+        }
+
+
+        function toggleNav() {
+            var mySidenav = document.getElementById("mySidenav");
+            if (mySidenav.style.width === "180px") {
+                closeNav();
+            } else {
+                openNav();
+            }
+        }
+
+</script>
+   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+</body>
+</html> 
+
+    
+   

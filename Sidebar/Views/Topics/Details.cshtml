@@ -1,0 +1,35 @@
+﻿@model Sidebar.Dtos.TopicDto
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h3 class="custom-font fadein center-adjust">Topic Details</h3>
+<hr />
+<div>
+    <dl class="row">
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.NumberOfPossibleMarks)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.NumberOfPossibleMarks)
+        </dd>
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.TitleOfCertificate)
+        </dt>
+        <dt class="col-sm-6">
+            @Html.DisplayFor(model => model.TitleOfCertificate)
+        </dt>
+
+    </dl>
+</div>
+<div class="center-adjust">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" style="width:95px;" class="custom-font btn btn-info col-sm-7">Edit</a> |
+    <a asp-action="Index" style="width:110px;" class="text-nowrap custom-font btn btn-primary col-sm-5">Back to List</a>
+</div>

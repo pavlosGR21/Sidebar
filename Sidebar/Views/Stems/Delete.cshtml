@@ -1,0 +1,63 @@
+﻿@model Sidebar.Dtos.StemDto
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3 class="custom-font fadein center-adjust">Deleting Stem</h3>
+<hr />
+<div>
+    <dl class="row custom-font fadein center-adjust">
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.Question)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.Question)
+        </dd>
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.OptionA)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.OptionA)
+        </dd>
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.OptionB)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.OptionB)
+        </dd>
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.OptionC)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.OptionC)
+        </dd>
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.OptionD)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.OptionD)
+        </dd>
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.CorrectAnswer)
+        </dt>
+        <dd class = "col-sm-6">
+            @Html.DisplayFor(model => model.CorrectAnswer)
+        </dd>
+        <dt class="col-sm-6 rightalign">
+            @Html.DisplayNameFor(model => model.TopicDescription)
+        </dt>
+        <dd class="col-sm-6">
+            @Html.DisplayFor(model => model.TopicDescription)
+        </dd>
+    </dl>
+    
+ 
+</div>
+<div class="center-adjust">
+       <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" style="width:100px;" class="btn btn-danger col-sm-6" /> |
+        <a asp-action="Index" style="width:110px;" class="btn btn-info col-sm-6">Back to List</a>
+    </form>
+</div>
