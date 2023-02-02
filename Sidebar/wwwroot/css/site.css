@@ -19,7 +19,7 @@ body {
     margin-bottom: 60px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 200;
-    background-image: url(../images/peakpx.jpg);
+    background-image: url(../images/windows-11-dark-mode-abstract-background-black-background-1920x1200-8710.jpg);
     background-color: #222222;
 }
 
@@ -175,8 +175,13 @@ button > a {
 }
 
 
+.light-mode {
+    background-color: white;
+    color: white;
+    background-image: url(../images/peakpx.jpg);
+}
 
-.navbar-brand:hover {
+    .navbar-brand:hover {
     text-shadow: 0 0 20px #3498db, 0 0 30px #3498db, 0 0 40px #FFFFFF;
 }
 

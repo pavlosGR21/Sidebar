@@ -107,12 +107,13 @@
 </div>
     <div id="main">
 
-
-
-
         <span class="sticky-header" style=" font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776;  &nbsp  menu </span>
         
 </div>
+    <div class="theme" style="float:right">
+        <button onclick="myFunction()">Toggle theme mode</button>
+    </div>
+
     <div class=" container ">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -142,6 +143,11 @@
             } else {
                 openNav();
             }
+        }
+
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("light-mode");
         }
 
 </script>
