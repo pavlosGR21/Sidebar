@@ -8,6 +8,7 @@
  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/bootstrapDarkly.css"/>
     <link rel="stylesheet" href="~/css/dark.css" asp-append-version="true" />
+    <link id="stylesheet" rel="stylesheet" href="~/css/light.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Sidebar.styles.css" asp-append-version="true" />
     <script src="https://cdn.ckeditor.com/ckeditor5/35.4.0/classic/ckeditor.js"></script>    
@@ -65,7 +66,7 @@
 </head>
 <body>
 
- <div class="  container-fluid">
+ <div class="  container">
    <nav class=" bg-primary">
       <div id="mySidenav" class="sidenav">
         <ul class="navbar-nav flex-grow-1">
@@ -112,7 +113,7 @@
         
 </div>
     <div class="theme" style="float:right">
-        <button onclick="myFunction()">Toggle theme mode</button>
+        <button onclick="myFunction()">Toggle dark mode</button>
     </div>
 
     <div class=" container ">
@@ -146,11 +147,22 @@
             }
         }
 
-        function myFunction() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
-        }
+       function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+    
+    // Save the state in local storage
+    if (element.classList.contains("dark-mode")) {
+        localStorage.setItem("dark-mode", "enabled");
+    } else {
+        localStorage.setItem("dark-mode", "disabled");
+    }
+}
 
+// Check if dark mode was previously enabled
+if (localStorage.getItem("dark-mode") === "enabled") {
+    document.body.classList.add("dark-mode");
+}
 </script>
    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
