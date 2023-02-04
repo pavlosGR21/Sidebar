@@ -5,15 +5,14 @@
 }
 
 <h2 class="custom-font fadein center-adjust">Certificate List</h2>
-
-<p class="center-adjust">
+<p class="center-adjust" style="margin-right:700px">
     <a asp-action="Create" class=" custom-font btn btn-info">Create New</a>
 </p>
-<table class="table">
-    <thead class=" sticky-header text-nowrap  text-center navbar-dark bg-primary"
-           onclick="scrollToTop()" style="cursor:pointer;"
-           data-toggle="tooltip" data-placement="top" title="click to scroll to top">
-        <tr style="border-style:hidden;">
+    <table class="table">
+        <thead class=" accordion-header text-nowrap  text-center navbar-dark bg-primary"
+               onclick="scrollToTop()" style="cursor:pointer;"
+               data-toggle="tooltip" data-placement="top" title="click to scroll to top">
+            <tr style="border-style:hidden;">
             <th style="border-top-left-radius: 100px; border-bottom-left-radius: 100px;">
                 @Html.DisplayNameFor(model => model.TitleOfCertificate)
             </th>

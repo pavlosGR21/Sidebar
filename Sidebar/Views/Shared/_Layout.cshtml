@@ -15,6 +15,10 @@
 
 <style>
 
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
 
         .sidenav {
             
@@ -95,6 +99,27 @@
             <li class="nav-item">
                 <a class="nav-link" asp-area="" asp-controller="Exams" asp-action="Create">Exams(Create)</a>
             </li>
+            <li>
+                       @* <div class="form-check form-switch">
+                            <input class="form-check-input" data-on-text="normal"
+                                   data-off-text="abnormal"
+                                   data-size="large" type="checkbox" id="flexSwitchCheckDefault" onclick="myFunction()">
+                            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                        </div>*@
+                        <label class="switch">
+                            <input type="checkbox" id="togBtn" onclick="myFunction()">
+                            <div class="slider round"></div>
+                        </label>
+
+                        @*<div>
+                            <input type="checkbox" class="checkbox" onclick="myFunction()" id="chk" />
+                            <label class="label" for="chk">
+                                <i class="fas fa-moon"> &#127762;</i>
+                                <i class="fas fa-sun">&#127774;</i>
+                                <div class="ball"></div>
+                            </label>
+                        </div>*@
+            </li>
            @* <li>
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 
@@ -109,12 +134,11 @@
 </div>
     <div id="main">
 
-        <span class="sticky-header" style=" font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776;  &nbsp  menu </span>
+        <span class="sticky-header" style=" font-size:30px;cursor:pointer " onclick="toggleNav()">&#9776;  &nbsp </span>
+       
         
 </div>
-    <div class="theme" style="float:right">
-        <button onclick="myFunction()">Toggle dark mode</button>
-    </div>
+   
 
     <div class=" container ">
         <main role="main" class="pb-3">
@@ -122,48 +146,10 @@
         </main>
     </div>
 
+   
+
 <script>
-        //side navbar function
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "180px";
-            
-            //document.body.style.backgroundColor = "#111111";
-        }
-
-       
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            
-            //document.body.style.backgroundColor = "#222222";
-        }
-
-
-        function toggleNav() {
-            var mySidenav = document.getElementById("mySidenav");
-            if (mySidenav.style.width === "180px") {
-                closeNav();
-            } else {
-                openNav();
-            }
-        }
-        
-        //dark mode function
-       function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
     
-    // Save mode
-    if (element.classList.contains("dark-mode")) {
-        localStorage.setItem("dark-mode", "enabled");
-    } else {
-        localStorage.setItem("dark-mode", "disabled");
-    }
-    }
-
-    // Check if dark mode was previously enabled
-    if (localStorage.getItem("dark-mode") === "enabled") {
-        document.body.classList.add("dark-mode");
-    }
 </script>
    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

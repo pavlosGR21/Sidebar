@@ -2,13 +2,18 @@ html {
   font-size: 14px;
 }
 
-@media screen and (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+@media (max-width: 500px) {
+    .container {
+        width: 40%;
+    }
 }
 
-
+@media only screen and (max-width: 767px) {
+    .table {
+        display: block;
+        width: 100%;
+    }
+}
 
 html {
   position: relative;
@@ -187,6 +192,81 @@ button > a {
     text-shadow: 0 0 20px #3498db, 0 0 30px #3498db, 0 0 40px #FFFFFF;
 }
 
+.switch {
+    position: relative;
+    display: flex;
+    justify-content:space-between;
+    width: 60px;
+    height: 34px;
+    margin-left:40px;
+}
+
+    .switch input {
+        display: none;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: dimgray;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 25px;
+        width: 25px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 50%;
+    }
+
+input:checked + .slider {
+    background-color: cornflowerblue;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {                              
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/*------ ADDED CSS ---------*/
+.slider:after {
+    content: "\1F31E";
+    color: white;
+    display: flex;
+    position: relative;
+    transform: translate(-5%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 26px;
+    font-family: Verdana, sans-serif;
+}
+
+input:checked + .slider:after {
+    content: '\1F312';
+    transform: translate(-50%-50%);
+    display: flex;
+    position: relative;
+    top: 50%;
+    left: 0%;
+}
+
 
 
 @keyframes fadein {
@@ -198,3 +278,56 @@ button > a {
         opacity: 1;
     }
 }
+
+
+
+
+
+
+
+
+/*.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+}
+
+    .label .ball {
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        height: 22px;
+        width: 22px;
+        transform: translateX(0px);
+        transition: transform 0.2s linear;
+    }
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+*/
+

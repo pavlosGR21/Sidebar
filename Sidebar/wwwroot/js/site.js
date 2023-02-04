@@ -55,6 +55,63 @@ function type() {
     }
 }
 
+//side navbar function
+function openNav() {
+    document.getElementById("mySidenav").style.width = "180px";
+
+    //document.body.style.backgroundColor = "#111111";
+}
+
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+
+    //document.body.style.backgroundColor = "#222222";
+}
+
+
+function toggleNav() {
+    var mySidenav = document.getElementById("mySidenav");
+    if (mySidenav.style.width === "180px") {
+        closeNav();
+    } else {
+        openNav();
+    }
+}
+
+//dark mode function
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+
+    // Save mode
+    if (element.classList.contains("dark-mode")) {
+        localStorage.setItem("dark-mode", "enabled");
+    } else {
+        localStorage.setItem("dark-mode", "disabled");
+    }
+}
+
+// Check if dark mode was previously enabled
+if (localStorage.getItem("dark-mode") === "enabled") {
+    document.body.classList.add("dark-mode");
+}
+
+// Get the switch element
+const switchEl = document.querySelector("input");
+
+// Get the saved switch state from local storage
+const savedSwitchState = localStorage.getItem("switchState");
+
+// Set the switch state based on the saved value
+switchEl.checked = savedSwitchState === "true";
+
+// Listen for switch changes
+switchEl.addEventListener("change", function () {
+    // Save the new switch state to local storage
+    localStorage.setItem("switchState", this.checked);
+});
+
 type();
 
 
