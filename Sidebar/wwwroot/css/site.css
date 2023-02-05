@@ -21,11 +21,14 @@ html {
 }
 
 body {
-    color:whitesmoke;
+    color: whitesmoke;
     margin-bottom: 60px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 200;
     background-image: url(../images/peakpx.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
     background-color: #222222;
 }
 
@@ -278,3 +281,44 @@ input:checked + .slider:after {
         opacity: 1;
     }
 }
+
+.btn-info {
+    background-color: #0275d8;
+    color:white;
+}
+
+.btn-edit {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.btn-details {
+    background-color: #0275d8;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #d9534f;
+    color: white;
+}
+
+.dark-mode .btn-edit {
+    background-color: darkgreen;
+    color: white;
+}
+
+.dark-mode .btn-details {
+    background-color: darkblue;
+    color: white;
+}
+
+.dark-mode .btn-delete {
+    background-color: darkred;
+    color: white;
+}
+
+.dark-mode  .btn.info{
+    background-color:darkblue;
+    color: white;
+}
+

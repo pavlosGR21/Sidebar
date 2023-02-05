@@ -57,7 +57,7 @@ function type() {
 
 //side navbar function
 function openNav() {
-    document.getElementById("mySidenav").style.width = "180px";
+    document.getElementById("mySidenav").style.width = "160px";
 
     //document.body.style.backgroundColor = "#111111";
 }
@@ -69,15 +69,36 @@ function closeNav() {
     //document.body.style.backgroundColor = "#222222";
 }
 
-
+//toggle open/close from the same button
 function toggleNav() {
     var mySidenav = document.getElementById("mySidenav");
-    if (mySidenav.style.width === "180px") {
+    if (mySidenav.style.width === "160px") {
         closeNav();
     } else {
         openNav();
     }
 }
+
+////save sideBars potition
+//function toggleNav() {
+//    var mySidenav = document.getElementById("mySidenav");
+//    if (mySidenav.style.width === "160px") {
+//        localStorage.setItem("navbarWidth", "0");
+//        closeNav();
+//    } else {
+//        localStorage.setItem("navbarWidth", "160px");
+//        openNav();
+//    }
+//}
+
+//window.onload = function () {
+//    var navbarWidth = localStorage.getItem("navbarWidth");
+//    if (navbarWidth === "160px") {
+//        openNav();
+//    } else {
+//        closeNav();
+//    }
+//};
 
 //dark mode function
 function myFunction() {
@@ -86,8 +107,10 @@ function myFunction() {
 
     // Save mode
     if (element.classList.contains("dark-mode")) {
+        document.getElementById("mySidenav").style.backgroundColor = "#111111";
         localStorage.setItem("dark-mode", "enabled");
     } else {
+        document.getElementById("mySidenav").style.backgroundColor = "#0009";
         localStorage.setItem("dark-mode", "disabled");
     }
 }
