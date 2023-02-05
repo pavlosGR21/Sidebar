@@ -21,7 +21,7 @@ html {
 }
 
 body {
-    color: whitesmoke;
+    color: white;
     margin-bottom: 60px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 200;
@@ -215,7 +215,7 @@ button > a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: dimgray;
+    background-color: yellow;
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 34px;
@@ -228,7 +228,7 @@ button > a {
         width: 25px;
         left: 4px;
         bottom: 4px;
-        background-color: white;
+        background-color: lightgrey;
         -webkit-transition: .4s;
         transition: .4s;
         border-radius: 50%;

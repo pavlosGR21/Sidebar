@@ -110,7 +110,7 @@ function myFunction() {
         document.getElementById("mySidenav").style.backgroundColor = "#111111";
         localStorage.setItem("dark-mode", "enabled");
     } else {
-        document.getElementById("mySidenav").style.backgroundColor = "#0009";
+        document.getElementById("mySidenav").style.backgroundColor = "#222222";
         localStorage.setItem("dark-mode", "disabled");
     }
 }
