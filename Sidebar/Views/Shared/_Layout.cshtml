@@ -49,13 +49,6 @@
                     color: white;
                 }
 
-            .sidenav .closebtn {
-                position: absolute;
-                top: 5px;
-                right: 5px;
-                font-size: 36px;
-                margin-left: 50px;
-            }
 
         #main {
             transition: margin-left .5s;
@@ -67,6 +60,9 @@
 }
   
 </style>
+    <div class="spinner">
+        <div class="spinner1"></div>
+    </div>
 </head>
 <body>
 
@@ -74,7 +70,19 @@
    <nav class=" bg-primary">
       <div id="mySidenav" class="sidenav">
         <ul class="navbar-nav flex-grow-1">
-            @*<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>*@
+            <li>
+                   <button class="button-nav" onclick="toggleNav()">
+                    <span class="icon">
+                    <svg viewBox="0 0 175 80" width="40" height="40">
+                    <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                    <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                    <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                    </svg>
+                    </span>
+                    <span class="text">MENU</span>
+                    </button>
+            </li>
+                  
             <li class="nav-item">
                 <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
             </li>
@@ -122,8 +130,17 @@
 </div>
     <div id="main">
 
-        <span class="sticky-header" style=" font-size:30px;cursor:pointer " onclick="toggleNav()">&#9776;  &nbsp </span>
-       
+       @* <span class="sticky-header" style=" font-size:30px;cursor:pointer " onclick="toggleNav()">&#9776;  &nbsp </span>*@
+      @*  <button class="btn" onclick="toggleNav()">
+            <span class="icon">
+                <svg viewBox="0 0 175 80" width="40" height="40">
+                    <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                    <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                    <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                </svg>
+            </span>
+            <span class="text">MENU</span>
+        </button>*@
         
 </div>
    
@@ -136,9 +153,7 @@
 
    
 
-<script>
-    
-</script>
+
    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

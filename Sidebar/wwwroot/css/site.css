@@ -282,10 +282,7 @@ input:checked + .slider:after {
     }
 }
 
-.btn-info {
-    background-color: #0275d8;
-    color:white;
-}
+
 
 .btn-edit {
     background-color: #5cb85c;
@@ -317,8 +314,98 @@ input:checked + .slider:after {
     color: white;
 }
 
-.dark-mode  .btn.info{
-    background-color:darkblue;
-    color: white;
+
+
+/*
+    button-nav. is sidenav button
+*/
+
+.button-nav {
+    z-index: 1;
+    position: fixed;
+    top: 10px;
+    left: 4px;
+    width: 130px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.5s ease-in-out;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    background: #040f16;
+    color: #f5f5f5;
+}
+
+    .button-nav:hover {
+        box-shadow: 0 0 20px 0px #03436b;
+    }
+
+.button-nav .icon {
+    position: absolute;
+    height: 40px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.button-nav .text {
+    transform: translateX(55px);
+}
+
+.button-nav:hover .icon {
+    width: 175px;
+}
+
+.button-nav:hover .text {
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.button-nav:focus {
+    outline: none;
+}
+
+.button-nav:active .icon {
+    transform: scale(0.85);
+}
+
+
+.spinner {
+    background-image: linear-gradient(rgb(186, 66, 255) 35%,rgb(0, 225, 255));
+    width: 100px;
+    height: 100px;
+    animation: spinning82341 1.7s linear infinite;
+    text-align: center;
+    border-radius: 50px;
+    filter: blur(1px);
+    box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+}
+
+.spinner1 {
+    background-color: rgb(36, 36, 36);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    filter: blur(10px);
+}
+
+
+.spinner {
+    display: none; /* hide the spinner by default */
+}
+
+.show-spinner {
+    display: block; /* show the spinner */
+}
+
+@keyframes spinning82341 {
+    to {
+        transform: rotate(360deg);
+    }
 }
 

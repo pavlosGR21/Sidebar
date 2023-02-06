@@ -135,6 +135,21 @@ switchEl.addEventListener("change", function () {
     localStorage.setItem("switchState", this.checked);
 });
 
+
+
+// Select the spinner element
+var spinner = document.querySelector(".spinner");
+
+// When the page is loaded, hide the spinner
+window.addEventListener("load", function () {
+    spinner.style.display = "none";
+});
+
+// When the page starts loading, show the spinner
+window.addEventListener("beforeunload", function () {
+    spinner.style.display = "block";
+});
+
 type();
 
 
